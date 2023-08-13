@@ -15,7 +15,7 @@ This Python script utilizes OpenCV and Pyttsx3 to create a real-time selfie capt
 
 ## Prerequisites
 
-- Python 3.x
+- Python 3
 - OpenCV (`cv2`) library
 - Pyttsx3 library
 
@@ -24,3 +24,22 @@ This Python script utilizes OpenCV and Pyttsx3 to create a real-time selfie capt
 1. Install the required libraries:
    ```bash
    pip install opencv-python pyttsx3
+   ```
+2. Download Haar Cascade XML Files:
+ Download the Haar Cascade XML files for face, smile, and eye detection from OpenCV's official repository or other sources.
+
+3. Save XML Files.
+ Save the downloaded XML files in the same directory as the script.
+
+4. Run the Script.
+
+```bash
+python autoselfie.py
+```
+5. Capture Selfies
+
+The webcam will start, and the script will detect smiles on recognized faces, capturing selfies automatically.
+
+6. Quit the Application:
+
+Press the 'q' key to quit the application.
