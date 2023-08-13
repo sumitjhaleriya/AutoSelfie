@@ -33,9 +33,9 @@ This Python script utilizes OpenCV and Pyttsx3 to create a real-time selfie capt
 
 4. **Run the Script:**
 
-  ```bash
-  python autoselfie.py
-  ```
+   ```bash
+   python autoselfie.py
+   ```
 5. **Capture Selfies:**
 
   The webcam will start, and the script will detect smiles on recognized faces, capturing selfies automatically.
