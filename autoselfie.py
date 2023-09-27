@@ -12,11 +12,18 @@ def speak(audio):
     engine.say(audio)
     engine.runAndWait()
 
-
 cap = cv2.VideoCapture(0)
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-smile_cascade = cv2.CascadeClassifier('haarcascade_smile.xml')
-eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
+# face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+# smile_cascade = cv2.CascadeClassifier('haarcascade_smile.xml')
+# eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
+
+face_cascade_name = cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
+face_cascade = cv2.CascadeClassifier(face_cascade_name)
+smile_cascade_name = cv2.data.haarcascades + 'haarcascade_smile.xml'
+smile_cascade = cv2.CascadeClassifier(smile_cascade_name)
+eye_cascade_name = cv2.data.haarcascades + 'haarcascade_eye.xml'
+eye_cascade = cv2.CascadeClassifier(eye_cascade_name)
+
 while True:
     _, frame = cap.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
